@@ -8,5 +8,6 @@ Usage:
 
 Ducky payloads you can find here:
 https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads
+
 Ducky script syntax:
 https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript
