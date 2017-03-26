@@ -58,7 +58,7 @@ l.replace(' a', 'KEY_A').replace(' a ', 'KEY_A')
 .replace(' F10','KEY_F10')
 .replace(' F11','KEY_F11')
 .replace(' F12','KEY_F12')
-#arrows ???
+#arrows 
 .replace('LEFTARROW', 'KEY_ARROW_LEFT')
 .replace('RIGHTARROW', 'KEY_ARROW_RIGHT')
 .replace('UPARROW','KEY_ARROW_UP')
@@ -123,6 +123,17 @@ def modreplacement():
 .replace(' F10','KEY_F10')
 .replace(' F11','KEY_F11')
 .replace(' F12','KEY_F12')
+
+#arrows 
+.replace('LEFTARROW', 'KEY_ARROW_LEFT')
+.replace('RIGHTARROW', 'KEY_ARROW_RIGHT')
+.replace('UPARROW','KEY_ARROW_UP')
+.replace('DOWNARROW','KEY_ARROW_DOWN')
+.replace('LEFT', 'KEY_ARROW_LEFT')
+.replace('RIGH', 'KEY_ARROW_RIGHT')
+.replace('UP','KEY_ARROW_UP')
+.replace('DOWN','KEY_ARROW_DOWN')
+
 .replace('PRINTSCREEN','sendKeyStroke(KEY_PRT_SCR' )
 .replace('TAB', 'sendKeyStroke(KEY_TAB')
 .replace('ESCAPE','KEY_ESC' )
@@ -150,8 +161,9 @@ else:
 	payload_input = open('payload.txt', "r")
 	sys.stdout = open("digipayload.ino", "w")
 	z = len(open('payload.txt', "r").readlines())
+
 #---------------
-#Shablon fragmenta ishodnogo teksta programmy
+#Digispark program fragment
 print('#include "DigiKeyboard.h"\n')
 print('#define KEY_ESC     41\n')
 print('#define KEY_BACKSPACE 42\n')
@@ -163,7 +175,7 @@ print('void setup() {\n')
 print('DigiKeyboard.delay(5000);') #windows mozhet dolgo raspoznavat digispark potomu bylo resheno dobavlyat 5 sek delay vmesto 0.5sek
 print('DigiKeyboard.sendKeyStroke(0);')
 #---------------------------------------
-#z = len(open('payload.txt', "r").readlines())
+
 for i in range(z):
 	l = payload_input.readline().replace('\n', '')
 	
@@ -206,7 +218,7 @@ for i in range(z):
 				print ('DigiKeyboard.sendKeyStroke(KEY_D,MOD_GUI_LEFT);')	
 			elif 'MENU' in l:
 				print ('DigiKeyboard.sendKeyStroke(MOD_GUI_RIGHT);')
-		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!INVERCE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1adin	
+		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!INVERCE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
 			elif 'CTRL ALT' in l:
 				replacement()
 			elif 'ALT' in l:
@@ -224,18 +236,17 @@ for i in range(z):
 				modreplacement()
 				
 
-		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1adin		
+		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!		
 			else:
 				replacement()
 
 		if len(l) <1:
 			print('', end = '')
-#shablon ishodnogo teksta programmy
+#Digispark program fragment
 print('\n}')
 print('\n')
 print('void loop() {\n')
 print('}\n')
-
-
 #-----------------------------------
+
 payload_input.close()
