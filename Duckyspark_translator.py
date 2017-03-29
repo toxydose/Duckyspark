@@ -18,7 +18,7 @@ def replacement():
 	print(
 l.replace(' a', 'KEY_A').replace(' a ', 'KEY_A')
 .replace(' b', 'KEY_B')
-.replace(' c', 'KEY_С')
+.replace(' c', 'KEY_C')
 .replace(' d', 'KEY_D')
 .replace(' e', 'KEY_E')
 .replace(' f', 'KEY_F')
@@ -189,35 +189,28 @@ for i in range(z):
 		
 		else:
 			if 'DELAY' in l:
-				print ('DigiKeyboard.', end ='')
+				print ('DigiKeyboard.', end = '')
 				print (l.replace('DELAY', 'delay(').replace(' ',''), end = '')
 				print(');')
 						
 			elif 'STRING' in l:
-				print ('DigiKeyboard.', end ='')
-				print (l.replace('STRING ','print("'),end = '')
-				print ('"', end = '')
+				print ('DigiKeyboard.', end = '')
+				print (l.replace('"', '")); DigiKeyboard.print(char(34)); DigiKeyboard.print(F("').replace('\\', '")); DigiKeyboard.print(char(92)); DigiKeyboard.print(F("').replace('STRING ','print(F("'), end = '')
+				print ('")', end = '')
 				print(');');
 				
-			elif l == 'GUI':
+			elif (l == 'GUI') or (l == 'WINDOWS') or (l == 'CONTROL ESCAPE'):
 				print('DigiKeyboard.sendKeyStroke(KEY_ESC,MOD_CONTROL_LEFT);')
-			
-			elif l == 'WINDOWS':
-				print('DigiKeyboard.sendKeyStroke(KEY_ESC,MOD_CONTROL_LEFT);')
-			elif l == 'CONTROL ESCAPE':
-				print('DigiKeyboard.sendKeyStroke(KEY_ESC,MOD_CONTROL_LEFT);')
-			elif l == 'GUI d':
+
+			elif (l == 'GUI d') or (l == 'WINDOWS d'):
 				print ('DigiKeyboard.sendKeyStroke(KEY_D,MOD_GUI_LEFT);')
 			
-			elif l == 'WINDOWS r':
-				print ('DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT)')
-			elif l == 'GUI r':
-				print ('DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT)')
+			elif (l == 'WINDOWS r') or (l == 'GUI r'):
+				print ('DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);')
 
-			elif l == 'WINDOWS d':
-				print ('DigiKeyboard.sendKeyStroke(KEY_D,MOD_GUI_LEFT);')	
 			elif 'MENU' in l:
 				print ('DigiKeyboard.sendKeyStroke(MOD_GUI_RIGHT);')
+				
 		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!INVERCE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
 			elif 'CTRL ALT' in l:
 				replacement()
@@ -234,7 +227,6 @@ for i in range(z):
 				mod_input = 'CONTROL'
 				mod_output = 'MOD_CONTROL_LEFT'
 				modreplacement()
-				
 
 		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!		
 			else:
