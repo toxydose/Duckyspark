@@ -2,6 +2,7 @@
 #Authors:
 #Alexander Yakovlev <a.yakovlev911@gmail.com> https://github.com/toxydose
 #https://awake.pro/
+#Vlad Khomenko https://github.com/eclipse7
 
 import sys
 #!!!!!
