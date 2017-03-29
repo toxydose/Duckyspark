@@ -195,7 +195,7 @@ for i in range(z):
 						
 			elif 'STRING' in l:
 				print ('DigiKeyboard.', end = '')
-				print (l.replace('STRING ','print(F("'),end = '')
+				print (l.replace('"', '")); DigiKeyboard.print(char(34)); DigiKeyboard.print(F("').replace('\ ', '")); DigiKeyboard.print(char(92)); DigiKeyboard.print(F("').replace('STRING ','print(F("'), end = '')
 				print ('")', end = '')
 				print(');');
 				
@@ -210,6 +210,7 @@ for i in range(z):
 
 			elif 'MENU' in l:
 				print ('DigiKeyboard.sendKeyStroke(MOD_GUI_RIGHT);')
+				
 		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!INVERCE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
 			elif 'CTRL ALT' in l:
 				replacement()
