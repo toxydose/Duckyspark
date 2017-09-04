@@ -197,7 +197,7 @@ for i in range(z):
 	else:
 
 		if 'REM' in l:
-			print ('//', l)	
+			print ('//', l.replace('REM ', ''))	
 		
 		else:
 			if 'DELAY' in l:
