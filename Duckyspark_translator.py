@@ -160,6 +160,15 @@ for i in range(z):
                 print ('")', end = '')
                 print(');')
 
+            elif 'MENU' in l:
+                l = 'KEY_F10'
+                mod = 'MOD_SHIFT_LEFT'
+                print('DigiKeyboard.', end='')
+                print('sendKeyStroke(', end='')
+                print(str(l), end='')
+                print(',' + mod, end='')
+                print(');')
+
             else:
                 mod = ''
                 for key in special_buttons.keys():
