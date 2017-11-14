@@ -11,84 +11,84 @@ from __future__ import print_function
 import sys
 
 # order is important
-SPECIAL_BUTTONS = {'CONTROL_RIGHT' : 'MOD_CONTROL_RIGHT',
-                    'CONTROL_LEFT'  : 'MOD_CONTROL_LEFT',
-                    'CONTROL'       : 'MOD_CONTROL_LEFT',
+SPECIAL_BUTTONS = {'CONTROL_RIGHT': 'MOD_CONTROL_RIGHT',
+                   'CONTROL_LEFT':  'MOD_CONTROL_LEFT',
+                   'CONTROL':       'MOD_CONTROL_LEFT',
 
-                    'CTRL_RIGHT'    : 'MOD_CONTROL_RIGHT',
-                    'CTRL_LEFT'     : 'MOD_CONTROL_LEFT',
-                    'CTRL'          : 'MOD_CONTROL_LEFT',
+                   'CTRL_RIGHT':    'MOD_CONTROL_RIGHT',
+                   'CTRL_LEFT':     'MOD_CONTROL_LEFT',
+                   'CTRL':          'MOD_CONTROL_LEFT',
 
-                    'SHIFT_RIGHT'   : 'MOD_SHIFT_RIGHT',
-                    'SHIFT_LEFT'    : 'MOD_SHIFT_LEFT',
-                    'SHIFT'         : 'MOD_SHIFT_LEFT',
+                   'SHIFT_RIGHT':   'MOD_SHIFT_RIGHT',
+                   'SHIFT_LEFT':    'MOD_SHIFT_LEFT',
+                   'SHIFT':         'MOD_SHIFT_LEFT',
 
-                   'ALT_RIGHT'     : 'MOD_ALT_RIGHT',
-                   'ALT_LEFT'      : 'MOD_ALT_LEFT',
-                   'ALT'           : 'MOD_ALT_LEFT',
+                   'ALT_RIGHT':     'MOD_ALT_RIGHT',
+                   'ALT_LEFT':      'MOD_ALT_LEFT',
+                   'ALT':           'MOD_ALT_LEFT',
 
-                   'GUI_RIGHT'     : 'MOD_GUI_RIGHT',
-                   'GUI_LEFT'      : 'MOD_GUI_LEFT',
-                   'GUI'           : 'MOD_GUI_LEFT',
-                   'WINDOWS'       : 'MOD_GUI_LEFT'}
+                   'GUI_RIGHT':     'MOD_GUI_RIGHT',
+                   'GUI_LEFT':      'MOD_GUI_LEFT',
+                   'GUI':           'MOD_GUI_LEFT',
+                   'WINDOWS':       'MOD_GUI_LEFT'}
 
 # menu = Shift + F10
-BUTTONS = {'a' : 'KEY_A',
-            'b' : 'KEY_B',
-            'c' : 'KEY_С',
-            'd' : 'KEY_D',
-            'e' : 'KEY_E',
-            'f' : 'KEY_F',
-            'g' : 'KEY_G',
-            'h' : 'KEY_H',
-            'i' : 'KEY_I',
-            'j' : 'KEY_J',
-            'k' : 'KEY_K',
-            'l' : 'KEY_L',
-            'm' : 'KEY_M',
-            'n' : 'KEY_N',
-            'o' : 'KEY_O',
-            'p' : 'KEY_P',
-            'q' : 'KEY_Q',
-            'r' : 'KEY_R',
-            's' : 'KEY_S',
-            't' : 'KEY_T',
-            'u' : 'KEY_U',
-            'v' : 'KEY_V',
-            'w' : 'KEY_W',
-            'x' : 'KEY_X',
-            'y' : 'KEY_Y',
-            'z' : 'KEY_Z',
+BUTTONS = {'a': 'KEY_A',
+           'b': 'KEY_B',
+           'c': 'KEY_С',
+           'd': 'KEY_D',
+           'e': 'KEY_E',
+           'f': 'KEY_F',
+           'g': 'KEY_G',
+           'h': 'KEY_H',
+           'i': 'KEY_I',
+           'j': 'KEY_J',
+           'k': 'KEY_K',
+           'l': 'KEY_L',
+           'm': 'KEY_M',
+           'n': 'KEY_N',
+           'o': 'KEY_O',
+           'p': 'KEY_P',
+           'q': 'KEY_Q',
+           'r': 'KEY_R',
+           's': 'KEY_S',
+           't': 'KEY_T',
+           'u': 'KEY_U',
+           'v': 'KEY_V',
+           'w': 'KEY_W',
+           'x': 'KEY_X',
+           'y': 'KEY_Y',
+           'z': 'KEY_Z',
 
-            'F1' : 'KEY_F1',
-            'F2' : 'KEY_F2',
-            'F3' : 'KEY_F3',
-            'F4' : 'KEY_F4',
-            'F5' : 'KEY_F5',
-            'F6' : 'KEY_F6',
-            'F7' : 'KEY_F7',
-            'F8' : 'KEY_F8',
-            'F9' : 'KEY_F9',
-            'F10' : 'KEY_F10',
-            'F11' : 'KEY_F11',
-            'F12' : 'KEY_F12',
+           'F1': 'KEY_F1',
+           'F2': 'KEY_F2',
+           'F3': 'KEY_F3',
+           'F4': 'KEY_F4',
+           'F5': 'KEY_F5',
+           'F6': 'KEY_F6',
+           'F7': 'KEY_F7',
+           'F8': 'KEY_F8',
+           'F9': 'KEY_F9',
+           'F10': 'KEY_F10',
+           'F11': 'KEY_F11',
+           'F12': 'KEY_F12',
 
-            'LEFTARROW' : 'KEY_ARROW_LEFT',
-            'RIGHTARROW' : 'KEY_ARROW_RIGHT',
-            'UPARROW' : 'KEY_ARROW_UP',
-            'DOWNARROW' : 'KEY_ARROW_DOWN',
-            'LEFT' : 'KEY_ARROW_LEFT',
-            'RIGH' : 'KEY_ARROW_RIGHT',
-            'UP' : 'KEY_ARROW_UP',
-            'DOWN' : 'KEY_ARROW_DOWN',
+           'LEFTARROW':     'KEY_ARROW_LEFT',
+           'RIGHTARROW':    'KEY_ARROW_RIGHT',
+           'UPARROW':       'KEY_ARROW_UP',
+           'DOWNARROW':     'KEY_ARROW_DOWN',
+           'LEFT':          'KEY_ARROW_LEFT',
+           'RIGH':          'KEY_ARROW_RIGHT',
+           'UP':            'KEY_ARROW_UP',
+           'DOWN':          'KEY_ARROW_DOWN',
 
-            'DELETE' : 'KEY_DELETE',
-            'DEL' : 'KEY_DELETE',
-            'PRINTSCREEN' : 'KEY_PRT_SCR',
-            'TAB' : 'KEY_TAB',
-            'ESCAPE' : 'KEY_ESC',
-            'SPACE' : 'KEY_SPACE',
-            'ENTER' : 'KEY_ENTER'}
+           'DELETE':        'KEY_DELETE',
+           'DEL':           'KEY_DELETE',
+           'PRINTSCREEN':   'KEY_PRT_SCR',
+           'TAB':           'KEY_TAB',
+           'ESCAPE':        'KEY_ESC',
+           'SPACE':         'KEY_SPACE',
+           'ENTER':         'KEY_ENTER'}
 
 # arguments
 payload_input = ''
@@ -98,15 +98,15 @@ if len(sys.argv) == 2:
         sys.stdout = open("digipayload.ino", "w")
         payload_len = len(open(sys.argv[1], "r").readlines())
     except IOError:
-        print('\nError! File "'+sys.argv[1]+'" does not exist!\n' )
+        print('\nError! File "' + sys.argv[1] + '" does not exist!\n')
         exit()
 elif len(sys.argv) == 3:
     try:
         payload_input = open(sys.argv[1], "r")
-        sys.stdout = open(sys.argv[2]+'.ino', 'w')
+        sys.stdout = open(sys.argv[2] + '.ino', 'w')
         payload_len = len(open(sys.argv[1], "r").readlines())
     except IOError:
-        print('\nError!, File "'+sys.argv[1]+'" does not exist!\n' )
+        print('\nError!, File "' + sys.argv[1] + '" does not exist!\n')
         exit()
 elif len(sys.argv) > 3:
     print('Too much Arguments')
@@ -142,20 +142,20 @@ for i in range(payload_len):
     else:
 
         if 'REM' in line:
-            print ('//', line.replace('REM ', ''))
+            print('//', line.replace('REM ', ''))
 
         else:
             if 'DELAY' in line:
-                print ('DigiKeyboard.', end='')
-                print (line.replace('DELAY', 'delay(').replace(' ', ''), end='')
+                print('DigiKeyboard.', end='')
+                print(line.replace('DELAY', 'delay(').replace(' ', ''), end='')
                 print(');')
 
             elif 'STRING' in line:
-                print ('DigiKeyboard.', end='')
-                print (line.replace('"', '")); DigiKeyboard.print(char(34)); DigiKeyboard.print(F("')
-                       .replace('\\', '")); DigiKeyboard.print(char(92)); DigiKeyboard.print(F("')
-                       .replace('STRING ', 'print(F("'), end='')
-                print ('")', end='')
+                print('DigiKeyboard.', end='')
+                print(line.replace('"', '")); DigiKeyboard.print(char(34)); DigiKeyboard.print(F("')
+                      .replace('\\', '")); DigiKeyboard.print(char(92)); DigiKeyboard.print(F("')
+                      .replace('STRING ', 'print(F("'), end='')
+                print('")', end='')
                 print(');')
 
             elif 'MENU' in line:
