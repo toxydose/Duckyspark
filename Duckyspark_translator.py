@@ -125,6 +125,7 @@ BUTTONS = {'a': 'KEY_A',
 
 # arguments
 payload_input = ''
+payload_len = 0
 
 if len(sys.argv) == 2:
     try:

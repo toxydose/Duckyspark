@@ -7,10 +7,11 @@ Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 
     python3 Duckyspark_translator.py [payload.txt] [output_file]
 
-or
+### or
 
-    python Duckyspark_translator.py [payload.txt]
-    # in this case the translated payload will be saved in the file "digipayload.ino"
+    python3 Duckyspark_translator.py [payload.txt]
+###### in this case the translated payload will be saved in the file "digipayload.ino"
+
 
 Ducky payloads you can find here:   https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads
 
