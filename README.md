@@ -1,14 +1,11 @@
-# Duckyspark v.0.31
+# Duckyspark v.0.33
 
 Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 
 
 # Usage:
 
-    python3 Duckyspark_translator.py [payload.txt] [output_file] 
-or
-
-    python Duckyspark_translator.py [payload.txt] [output_file]
+    python3 Duckyspark_translator.py [payload.txt] [output_file]
 
 or
 
