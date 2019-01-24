@@ -1,16 +1,16 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# version 0.33
+# version 0.4
 # Authors:
-# Alexander Yakovlev <a.yakovlev911@gmail.com> https://github.com/toxydose
+# Alex Bridges <a.yakovlev911@gmail.com> https://github.com/toxydose
 # https://awake.pro/
 # Vlad Khomenko https://github.com/eclipse7
 
 from __future__ import print_function
 import sys
 
-
+out = sys.__stdout__
 # help
 HELP = '''
 ========== Duckyspark {v.0.33} ==============================
@@ -42,6 +42,8 @@ https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript
 ----------------------------------------------------------------
 '''
 
+SUCCESS = 'Success!'
+ERROR = 'ERROR! -h or --help for help\n'
 
 # order is important
 SPECIAL_BUTTONS = {'CONTROL_RIGHT': 'MOD_CONTROL_RIGHT',
@@ -127,13 +129,17 @@ BUTTONS = {'a': 'KEY_A',
 payload_input = ''
 payload_len = 0
 
-if len(sys.argv) == 2:
+if '-h' in sys.argv or '--help' in sys.argv:
+    print(HELP)
+    exit()
+elif len(sys.argv) == 2:
     try:
         payload_input = open(sys.argv[1], "r")
         sys.stdout = open("digipayload.ino", "w")
         payload_len = len(open(sys.argv[1], "r").readlines())
     except IOError:
-        print('\nError! File "' + sys.argv[1] + '" does not exist!\n')
+        error_reason = ('File "' + sys.argv[1] + '" does not exist!\n')
+        print(ERROR + error_reason)
         exit()
 elif len(sys.argv) == 3:
     try:
@@ -141,10 +147,12 @@ elif len(sys.argv) == 3:
         sys.stdout = open(sys.argv[2] + '.ino', 'w')
         payload_len = len(open(sys.argv[1], "r").readlines())
     except IOError:
-        print('\nError!, File "' + sys.argv[1] + '" does not exist!\n')
+        error_reason = ('File "' + sys.argv[1] + '" does not exist!\n')
+        print(ERROR + error_reason)
         exit()
 elif len(sys.argv) > 3:
-    print('Too much Arguments')
+    error_reason = 'Too much Arguments'
+    print(ERROR + error_reason)
     exit()
 else:
     try:
@@ -152,7 +160,7 @@ else:
         sys.stdout = open("digipayload.ino", "w")
         payload_len = len(open('payload.txt', "r").readlines())
     except FileNotFoundError:
-        print (HELP)
+        print(HELP)
         exit()
 
 # Digispark program fragment
@@ -243,3 +251,5 @@ void loop() {
 # -----------------------------------
 
 payload_input.close()
+sys.stdout = out
+print(SUCCESS)

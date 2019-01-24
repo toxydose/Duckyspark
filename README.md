@@ -1,4 +1,4 @@
-# Duckyspark v.0.33
+# Duckyspark v.0.4
 
 Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 
