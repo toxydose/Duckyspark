@@ -24,3 +24,4 @@ Recently we found the video "Digispark Flashing Guide & Ducky Payload Converters
 Our site: https://awake.pro/
 
 Upd: added 3d models of USB flesh drive to hide Digispark
+![duckyspark_flash](https://user-images.githubusercontent.com/20900400/56039187-5d861500-5d3c-11e9-8c4c-b385f8a05b6f.jpg)
