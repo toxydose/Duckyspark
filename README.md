@@ -2,6 +2,9 @@
 
 Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 
+### DISCLAIMER:
+
+Usage of this program is only allowed within boundaries of law. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 # Usage:
 
