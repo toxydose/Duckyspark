@@ -6,6 +6,10 @@
 # Alex Bridges <a.yakovlev911@gmail.com> https://github.com/toxydose
 # https://awake.pro/
 # Vlad Khomenko https://github.com/eclipse7
+#
+# Usage of this program is only allowed within boundaries of law.
+# Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+
 
 from __future__ import print_function
 import sys
