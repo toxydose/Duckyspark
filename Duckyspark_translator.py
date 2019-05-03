@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# version 0.4
+# Duckyspark - Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 # Authors:
 # Alex Bridges <a.yakovlev911@gmail.com> https://github.com/toxydose
 # https://awake.pro/
@@ -15,9 +15,10 @@ from __future__ import print_function
 import sys
 
 out = sys.__stdout__
-# help
+
+VERSION = '0.4.1'
 HELP = '''
-========== Duckyspark {v.0.33} ==============================
+========== Duckyspark v.''' + VERSION + ''' ==============================
 https://github.com/toxydose/Duckyspark/
 Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 =============================================================
@@ -135,6 +136,13 @@ payload_len = 0
 
 if '-h' in sys.argv or '--help' in sys.argv:
     print(HELP)
+    exit()
+elif '-v' in sys.argv or '--version' in sys.argv:
+    print ('''
+========== Duckyspark v.''' + VERSION + ''' ==============================
+https://github.com/toxydose/Duckyspark/
+Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
+=============================================================''')
     exit()
 elif len(sys.argv) == 2:
     try:
