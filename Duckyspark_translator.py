@@ -117,7 +117,7 @@ BUTTONS = {'a': 'KEY_A',
            'UPARROW':       'KEY_ARROW_UP',
            'DOWNARROW':     'KEY_ARROW_DOWN',
            'LEFT':          'KEY_ARROW_LEFT',
-           'RIGH':          'KEY_ARROW_RIGHT',
+           'RIGHT':         'KEY_ARROW_RIGHT',
            'UP':            'KEY_ARROW_UP',
            'DOWN':          'KEY_ARROW_DOWN',
 
@@ -164,6 +164,7 @@ else:
         sys.stdout = open("digipayload.ino", "w")
         payload_len = len(open('payload.txt', "r").readlines())
     except FileNotFoundError:
+        print('\nERROR: Payload file "payload.txt" was not found')
         print(HELP)
         exit()
 
