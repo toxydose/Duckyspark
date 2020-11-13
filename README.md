@@ -17,6 +17,7 @@ Usage of this program is only allowed within boundaries of law. Developers assum
 
 
 Ducky payloads you can find here:   https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads
+                         or here:   https://github.com/CedArctic/DigiSpark-Scripts
 
 Or, you can simply write your own payloads using Ducky script
 
