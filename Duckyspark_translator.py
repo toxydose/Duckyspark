@@ -3,7 +3,7 @@
 
 # Duckyspark - Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 # Authors:
-# Alex Bridges <a.yakovlev911@gmail.com> https://github.com/toxydose
+# Alex Bridges https://github.com/toxydose
 # https://awake.pro/
 # Vlad Khomenko https://github.com/eclipse7
 #
@@ -23,7 +23,7 @@ https://github.com/toxydose/Duckyspark/
 Translator from USB-Rubber-Ducky payloads (Ducky script) to a Digispark code.
 =============================================================
 Authors:
-Alex Bridges <a.yakovlev911@gmail.com> https://github.com/toxydose
+Alex Bridges https://github.com/toxydose
 Vlad Khomenko https://github.com/eclipse7
 https://awake.pro/ community
 
